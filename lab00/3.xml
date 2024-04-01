@@ -1,0 +1,44 @@
+<table1>
+    <line sr="1">
+        <id>1</id>
+        <name>john doe </name>
+        <address>
+            <flat_no> </flat_no>
+            <house_no> 38</house_no>
+            <road_no> 28</road_no>
+            <area>Banani </area>
+            <division>Dhaka </division>
+        </address>
+        <department> sales </department>
+        <salary>  $20000   </salary>
+    </line>
+
+    <line sr="2">
+        <id> 2 </id>
+        <name> mark zuckerberg </name>
+       <address>
+            <flat_no>A/1 </flat_no>
+            <house_no> 20</house_no>
+            <road_no> 18</road_no>
+            <area>Mirpur </area>
+            <division>Dhaka </division>
+        </address>
+        <department> accounts </department>
+        <salary>  $12000  </salary>
+    </line>
+
+     <line sr="3">
+        <id> 3 </id>
+        <name> ala visku </name>
+        <address>
+            <flat_no> </flat_no>
+            <house_no> 38</house_no>
+            <road_no> 3</road_no>
+            <area> Motijheel</area>
+            <division> </division>
+        </address>
+        <department> human resource </department>
+        <salary>  $30000 </salary>
+        
+    </line>
+</table1>
