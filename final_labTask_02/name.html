@@ -1,0 +1,47 @@
+<html>
+<head>
+    <title>Name Form</title>
+</head>
+<body>
+    
+    <form method="" action="" enctype="">
+NAME:<br> <input type="text" name="username" id="username" onkeyup="username()" /> <br><br>
+          <input type="button" name="click" value="next" /><br>
+    </form>
+        <h3></h3>
+
+<script>
+    function username(){
+
+        let username = document.getElementById('username').value;
+        let obj= document.getElementsByTagName('h3')[0];
+        var num=['0','1', '2', '3', '4', '5', '6', '7', '8', '9'];
+        var allowedChars = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '.', '-','0','1', '2', '3', '4', '5', '6', '7', '8', '9'];
+
+        if(username == ""){   
+           obj.innerHTML = "Null data";
+           obj.style.color = "red";
+        }
+        else if(username.length <2 ){
+            obj.innerHTML = "Name has to  atleast two words";
+            obj.style.color = "red";
+        }
+        else if(num.includes(username.charAt(0))){
+            obj.innerHTML = "Name cannot be strat with number";
+            obj.style.color = "red";
+        }
+        else{
+            for (var i = 0; i < username.length; i++) {
+                    if (!allowedChars.includes(username.charAt(i))) {
+                    obj.innerHTML = "Name can contain a-z, A-Z, dot(.), or dash(-)";
+                    obj.style.color = "red";
+                }
+            }
+        }
+    }
+</script>
+    
+
+</body>
+
+</html>

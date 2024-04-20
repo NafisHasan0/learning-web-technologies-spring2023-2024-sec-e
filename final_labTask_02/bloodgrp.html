@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>Name Form</title>
+</head>
+<body>
+    BLOOD GROUP: <select name="" id="bloodGroup">
+        <option value="">Select Blood Group</option>
+            <option value="">A+</option>
+            <option value="">A-</option>
+            <option value="">B+</option>
+            <option value="">B-</option>
+            <option value="">O+</option>
+            <option value="">O-</option>
+            <option value="">AB+</option>
+            <option value="">AB-</option>
+           </select> <br>
+           <input type="button" name="click" value="next" onclick=" bloodcheck()" >
+        <h3></h3>
+   
+<script>
+    function bloodcheck(){
+        let bloodGroup = document.getElementById('bloodGroup').value;
+        let obj= document.getElementsByTagName('h3')[0];
+
+        if(bloodGroup == "Select Blood Group"){
+            obj.innerHTML = "Please select a option";
+            obj.style.color = "red";
+        }
+    }
+</script>
+</body>
+
+</html>

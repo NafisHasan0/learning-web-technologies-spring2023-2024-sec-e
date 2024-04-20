@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <title>Name Form</title>
+</head>
+
+<body>
+
+   
+    Email:<br> 
+    <input type="email" name="email" id="email" onkeyup="email()" /> <br><br>
+    <input type="button" name="click" value="next" /><br>
+
+    <h3></h3>
+
+<script>
+    function email(){
+        let email = document.getElementById('email').value;
+        let obj= document.getElementsByTagName('h3')[0];
+
+        if(email == ""){   
+            obj.innerHTML = "Null data";
+            obj.style.color = "red";
+         }
+        else if(!email.includes('@')){
+            obj.innerHTML = "Email must contain @";
+            obj.style.color = "red";
+        }
+        else if(!email.endsWith('.com')){
+            obj.innerHTML = "Email must contain .com";
+            obj.style.color = "red";
+        }
+
+
+
+
+
+
+    }
+
+</script>
+   
+
+    
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <title>Form</title>
+</head>
+
+<body>
+
+  
+       <fieldset style="width: 20%;">
+        <legend>Profile Picture</legend>
+        USER ID <input type="number" name="id" value="" /> <br>
+        Picture <input type="file" name="pic" value="" /> <br>
+       </fieldset>
+       <input type="button" name="click" value="next" onclick=" idcheck()" ><br><br>
+        <h3></h3>
+
+
+    <script>
+        function idheck(){
+            let idInputs = document.getElementsByName('id');
+            let picInputs = document.getElementsByName('pic');
+            let obj= document.getElementsByTagName('h3')[0];
+
+            if(idInputs == ""){   
+                obj.innerHTML = "please enter userid";
+                obj.style.color = "red";
+             }
+
+            else if(idInputs<0){
+                obj.innerHTML = "userid cannot be negative";
+                obj.style.color = "red";
+            }
+          
+            else if(picInputs == ""){   
+                obj.innerHTML = "please select a picture";
+                obj.style.color = "red";
+             }
+
+        }
+    </script>
+
+
+</body>
+
+</html>

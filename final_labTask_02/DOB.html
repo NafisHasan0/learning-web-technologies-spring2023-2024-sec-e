@@ -1,0 +1,68 @@
+<html>
+
+<head>
+    <title>Name Form</title>
+</head>
+
+<body>
+
+    
+        <fieldset >
+
+        <legend>Date of Birth</legend>
+        <label for="day">dd</label>
+            <input type="number" name="day" id="day"  onkeyup="datecheck()" />
+
+            <label for="month">mm</label>
+            <input type="number" name="month" id="month" onkeyup="datecheck()" />
+
+            <label for="year">yyyy</label>
+            <input type="number" name="year" id="year" onkeyup="datecheck()"/>
+        </fieldset>
+
+        <input type="button" name="click" value="next"/><br>
+        <h3></h3>
+
+
+        <script >
+            function datecheck() {
+            let day = document.getElementById('day').value;
+            let month = document.getElementById('month').value;
+            let year = document.getElementById('year').value;
+            let obj= document.getElementsByTagName('h3')[0];
+
+            if(day == ""){   
+                obj.innerHTML = "Null data";
+                obj.style.color = "red";
+            }
+            else if(month == ""){   
+                obj.innerHTML = "Null data";
+                obj.style.color = "red";
+            }
+            else if(year == ""){   
+                obj.innerHTML = "Null data";
+                obj.style.color = "red";
+            }
+
+            else if (day < 1 || day > 31) {
+                obj.innerHTML = "Day must be between 1-31";
+                obj.style.color = "red";
+            }
+
+            else if (month < 1 || month > 12) {
+                obj.innerHTML = "Month must be between 1-12";
+                obj.style.color = "red";
+            }
+
+            else if (year < 1900 || year > 2100) {
+                obj.innerHTML = "Year must be between 1900-2100";
+                obj.style.color = "red";
+            }
+            }
+        </script>
+
+    
+
+</body>
+
+</html>
